@@ -92,7 +92,7 @@ const WorkSlider = () => {
 
                   {/* overlay gradient */}
                   <div
-                    className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"
+                    className="absolute inset-0 bg-gradient-to-l from-transparent via-[#38BDF8] to-[#1E3A8A] opacity-0 group-hover:opacity-80 transition-all duration-700"
                     aria-hidden
                   />
 

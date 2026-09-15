@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
           content="NK Digital Craft, Nikhil Kumar Singh, AI Website Creator, Full Stack Developer, Website Development, AI Automation, SEO, Local SEO, Digital Marketing, UI/UX, Puri, Odisha, India"
         />
         <meta name="author" content="Nikhil Kumar Singh" />
-        <meta name="theme-color" content="#f13024" />
+        <meta name="theme-color" content="#0ea5e9" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
