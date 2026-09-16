@@ -33,6 +33,8 @@ const Contact = () => {
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
   const [showServicesModal, setShowServicesModal] = useState(false);
   const [serviceError, setServiceError] = useState(false);
+  const [waUrl, setWaUrl] = useState("");
+  const [waBlocked, setWaBlocked] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -56,6 +58,25 @@ const Contact = () => {
     }));
   };
 
+  const buildWhatsAppUrl = (data) => {
+    const lines = [
+      "*New Enquiry — NK Digital Craft Website*",
+      "",
+      `*Name:* ${data.name}`,
+      `*Email:* ${data.email}`,
+      data.phone && `*Phone:* ${data.phone}`,
+      data.company && `*Company:* ${data.company}`,
+      data.address && `*Address:* ${data.address}`,
+      `*Subject:* ${data.subject}`,
+      `*Services:* ${data.services.join(", ")}`,
+      "",
+      "*Message:*",
+      data.message,
+    ].filter(Boolean);
+
+    return `https://wa.me/918260999311?text=${encodeURIComponent(lines.join("\n"))}`;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (form.services.length === 0) {
@@ -64,6 +85,14 @@ const Contact = () => {
       return;
     }
     setServiceError(false);
+
+    // open WhatsApp synchronously (within the click event) so browsers
+    // don't block it as a popup — it must not wait on the async fetch below
+    const url = buildWhatsAppUrl(form);
+    const waWindow = window.open(url, "_blank", "noopener,noreferrer");
+    setWaUrl(url);
+    setWaBlocked(!waWindow);
+
     setStatus("loading");
     try {
       const res = await fetch("/api/contact", {
@@ -141,8 +170,20 @@ const Contact = () => {
               <BsCheckCircleFill className="text-5xl text-accent" />
               <h3 className="text-2xl font-semibold text-white">Message Sent!</h3>
               <p className="text-white/60 max-w-[400px]">
-                Thank you for reaching out. NK Digital Craft will get back to you shortly.
+                Thank you for reaching out. Your enquiry was emailed to NK Digital Craft
+                {waBlocked ? "" : " and a WhatsApp chat was opened"} — we&apos;ll get back to you shortly.
               </p>
+              {waBlocked && (
+                <a
+                  href={waUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="flex items-center gap-x-2 text-accent hover:underline text-sm"
+                >
+                  <RiWhatsappLine className="text-lg" aria-hidden />
+                  Your browser blocked the WhatsApp popup — tap here to open it
+                </a>
+              )}
               <button
                 onClick={() => setStatus("idle")}
                 className="mt-4 btn rounded-full border border-accent text-accent px-8 hover:bg-accent hover:text-white transition-all duration-300"
@@ -294,7 +335,8 @@ const Contact = () => {
               {/* error */}
               {status === "error" && (
                 <p className="text-red-400 text-sm text-center -mt-2">
-                  Something went wrong. Please try WhatsApp or email directly.
+                  Email failed to send, but your WhatsApp chat should have opened —
+                  please send it from there, or email us directly.
                 </p>
               )}
 
