@@ -1,0 +1,196 @@
+<svg width="1440" height="810" viewBox="0 0 1440 810" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A1633;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#0D1E47;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E3A8A;stop-opacity:0.4" />
+    </linearGradient>
+    <!-- Glow effect for accent -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Subtle particle dots pattern -->
+    <radialGradient id="particleGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#38BDF8;stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#38BDF8;stop-opacity:0"/>
+    </radialGradient>
+    <!-- Explosion bg radial -->
+    <radialGradient id="explosionGrad" cx="70%" cy="50%" r="55%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:0.45"/>
+      <stop offset="50%" style="stop-color:#0EA5E9;stop-opacity:0.08"/>
+      <stop offset="100%" style="stop-color:#0A1633;stop-opacity:0"/>
+    </radialGradient>
+    <!-- Circles overlay -->
+    <radialGradient id="circlesGrad" cx="80%" cy="50%" r="35%">
+      <stop offset="0%" style="stop-color:#0EA5E9;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#0A1633;stop-opacity:0"/>
+    </radialGradient>
+    <!-- Nav shadow -->
+    <filter id="navShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1440" height="810" fill="url(#bgGrad)"/>
+  <!-- Explosion radial overlay -->
+  <ellipse cx="1010" cy="405" rx="600" ry="420" fill="url(#explosionGrad)"/>
+  <!-- Circles overlay -->
+  <ellipse cx="1150" cy="380" rx="340" ry="340" fill="url(#circlesGrad)"/>
+
+  <!-- Scattered particles -->
+  <circle cx="120" cy="180" r="1.5" fill="#38BDF8" opacity="0.5"/>
+  <circle cx="280" cy="90" r="1" fill="#38BDF8" opacity="0.4"/>
+  <circle cx="400" cy="250" r="1.5" fill="#93C5FD" opacity="0.35"/>
+  <circle cx="60" cy="400" r="1" fill="#38BDF8" opacity="0.45"/>
+  <circle cx="180" cy="550" r="2" fill="#38BDF8" opacity="0.3"/>
+  <circle cx="320" cy="680" r="1.5" fill="#93C5FD" opacity="0.4"/>
+  <circle cx="700" cy="100" r="1" fill="#38BDF8" opacity="0.35"/>
+  <circle cx="850" cy="60" r="1.5" fill="#38BDF8" opacity="0.4"/>
+  <circle cx="1050" cy="130" r="1" fill="#93C5FD" opacity="0.3"/>
+  <circle cx="1200" cy="200" r="2" fill="#38BDF8" opacity="0.5"/>
+  <circle cx="1350" cy="80" r="1.5" fill="#38BDF8" opacity="0.4"/>
+  <circle cx="1400" cy="300" r="1" fill="#93C5FD" opacity="0.35"/>
+  <circle cx="1300" cy="500" r="2" fill="#38BDF8" opacity="0.45"/>
+  <circle cx="950" cy="700" r="1.5" fill="#38BDF8" opacity="0.3"/>
+  <circle cx="480" cy="760" r="1" fill="#93C5FD" opacity="0.4"/>
+  <circle cx="600" cy="640" r="1.5" fill="#38BDF8" opacity="0.35"/>
+  <circle cx="750" cy="720" r="1" fill="#38BDF8" opacity="0.3"/>
+  <!-- Particle connection lines -->
+  <line x1="120" y1="180" x2="280" y2="90" stroke="#38BDF8" stroke-width="0.5" opacity="0.15"/>
+  <line x1="280" y1="90" x2="400" y2="250" stroke="#38BDF8" stroke-width="0.5" opacity="0.12"/>
+  <line x1="1200" y1="200" x2="1350" y2="80" stroke="#38BDF8" stroke-width="0.5" opacity="0.15"/>
+  <line x1="1050" y1="130" x2="1200" y2="200" stroke="#93C5FD" stroke-width="0.5" opacity="0.12"/>
+
+  <!-- ============ NAVBAR ============ -->
+  <rect width="1440" height="72" fill="#0A1633" opacity="0.92"/>
+  <rect width="1440" height="1" y="72" fill="#38BDF8" opacity="0.25"/>
+
+  <!-- Logo -->
+  <text x="60" y="43" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="20" fill="white" letter-spacing="0.5">NK Digital Craft</text>
+  <rect x="227" y="38" width="6" height="6" fill="#0EA5E9"/>
+
+  <!-- Nav links -->
+  <text x="650" y="43" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.55)" letter-spacing="0.5">Home</text>
+  <text x="710" y="43" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.55)" letter-spacing="0.5">About</text>
+  <text x="768" y="43" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.55)" letter-spacing="0.5">Services</text>
+  <text x="838" y="43" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.55)" letter-spacing="0.5">Work</text>
+  <text x="886" y="43" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.55)" letter-spacing="0.5">Contact</text>
+
+  <!-- Hire Me button -->
+  <rect x="1320" y="22" width="100" height="36" rx="4" fill="none" stroke="#0EA5E9" stroke-width="1.5"/>
+  <text x="1370" y="45" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#0EA5E9" text-anchor="middle" font-weight="600">Hire Me</text>
+
+  <!-- Social icons (dots representing icons) -->
+  <circle cx="1220" cy="40" r="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <circle cx="1248" cy="40" r="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <circle cx="1276" cy="40" r="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <!-- Instagram icon simplified -->
+  <rect x="1214" y="34" width="12" height="12" rx="3" fill="none" stroke="#0EA5E9" stroke-width="1.5"/>
+  <circle cx="1220" cy="40" r="3" fill="none" stroke="#0EA5E9" stroke-width="1.2"/>
+  <!-- WhatsApp simplified -->
+  <circle cx="1248" cy="40" r="4.5" fill="none" stroke="#0EA5E9" stroke-width="1.5"/>
+  <!-- Github simplified -->
+  <circle cx="1276" cy="40" r="4.5" fill="none" stroke="#0EA5E9" stroke-width="1.5"/>
+
+  <!-- ============ HERO CONTENT ============ -->
+
+  <!-- Tagline badge -->
+  <rect x="60" y="145" width="220" height="30" rx="15" fill="rgba(14,165,233,0.12)" stroke="rgba(14,165,233,0.3)" stroke-width="1"/>
+  <circle cx="80" cy="160" r="4" fill="#0EA5E9"/>
+  <text x="94" y="165" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#0EA5E9" font-weight="500" letter-spacing="1">AI WEBSITE CREATOR</text>
+
+  <!-- Main heading line 1 -->
+  <text x="60" y="238" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="58" fill="white" letter-spacing="-1">AI-Powered Websites</text>
+  <!-- Main heading line 2 accent -->
+  <text x="60" y="308" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="58" fill="#0EA5E9" letter-spacing="-1" filter="url(#glow)">Into Digital Growth</text>
+  <!-- Dot accent -->
+  <circle cx="64" cy="340" r="5" fill="#0EA5E9"/>
+
+  <!-- Subtext -->
+  <text x="60" y="380" font-family="'Segoe UI', Arial, sans-serif" font-size="17" fill="rgba(255,255,255,0.55)" font-weight="300">I&apos;m Nikhil Kumar Singh — Founder &amp; CEO of NK Digital Craft.</text>
+  <text x="60" y="406" font-family="'Segoe UI', Arial, sans-serif" font-size="17" fill="rgba(255,255,255,0.55)" font-weight="300">AI Websites · Full Stack · SEO · Digital Marketing · Automation</text>
+  <text x="60" y="432" font-family="'Segoe UI', Arial, sans-serif" font-size="17" fill="rgba(255,255,255,0.45)" font-weight="300">Serving businesses from Puri, Odisha · 10+ years experience</text>
+
+  <!-- CTA Buttons -->
+  <rect x="60" y="465" width="170" height="50" rx="6" fill="#0EA5E9"/>
+  <text x="145" y="496" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="white" text-anchor="middle" font-weight="600">View My Work</text>
+
+  <rect x="248" y="465" width="170" height="50" rx="6" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+  <text x="333" y="496" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.7)" text-anchor="middle" font-weight="500">Contact Me</text>
+
+  <!-- Stat counters row -->
+  <text x="60" y="575" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="38" fill="#0EA5E9">10</text>
+  <text x="60" y="602" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)" letter-spacing="1.5">YEARS EXPERIENCE</text>
+  <line x1="130" y1="558" x2="130" y2="610" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="148" y="575" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="38" fill="#0EA5E9">25</text>
+  <text x="148" y="602" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)" letter-spacing="1.5">SERVICES OFFERED</text>
+  <line x1="240" y1="558" x2="240" y2="610" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="258" y="575" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="38" fill="#0EA5E9">1</text>
+  <text x="258" y="602" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)" letter-spacing="1.5">LIVE CLIENT PROJECT</text>
+
+  <!-- Page indicator dots (bottom left) -->
+  <circle cx="60" cy="760" r="5" fill="#0EA5E9"/>
+  <circle cx="78" cy="760" r="3" fill="rgba(255,255,255,0.25)"/>
+  <circle cx="92" cy="760" r="3" fill="rgba(255,255,255,0.25)"/>
+  <circle cx="106" cy="760" r="3" fill="rgba(255,255,255,0.25)"/>
+  <circle cx="120" cy="760" r="3" fill="rgba(255,255,255,0.25)"/>
+
+  <!-- ============ RIGHT SIDE — Avatar area ============ -->
+  <!-- Circular glow behind avatar -->
+  <circle cx="1040" cy="490" r="280" fill="rgba(14,165,233,0.04)" stroke="rgba(14,165,233,0.07)" stroke-width="1"/>
+  <circle cx="1040" cy="490" r="230" fill="rgba(30,58,138,0.18)" stroke="rgba(14,165,233,0.1)" stroke-width="1"/>
+  <!-- Rotating circle star decoration suggestion -->
+  <circle cx="1040" cy="490" r="290" fill="none" stroke="rgba(14,165,233,0.06)" stroke-width="1" stroke-dasharray="4 8"/>
+
+  <!-- Avatar figure (silhouette style) -->
+  <!-- Body/torso area -->
+  <ellipse cx="1040" cy="680" rx="130" ry="60" fill="#0A1633" opacity="0.6"/>
+  <!-- Shirt/body -->
+  <path d="M930 760 Q940 580 1040 560 Q1140 580 1150 760 Z" fill="rgba(14,165,233,0.15)" stroke="rgba(14,165,233,0.2)" stroke-width="1"/>
+  <!-- Head circle -->
+  <circle cx="1040" cy="460" r="110" fill="rgba(14,165,233,0.08)" stroke="rgba(14,165,233,0.15)" stroke-width="1.5"/>
+  <!-- Face placeholder oval -->
+  <ellipse cx="1040" cy="455" rx="72" ry="88" fill="rgba(30,58,138,0.3)"/>
+  <!-- Subtle highlight on avatar circle -->
+  <circle cx="1040" cy="460" r="108" fill="none" stroke="rgba(14,165,233,0.22)" stroke-width="2"/>
+
+  <!-- NK initials watermark on avatar -->
+  <text x="1040" y="475" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="52" fill="rgba(14,165,233,0.18)" text-anchor="middle" letter-spacing="4">NK</text>
+
+  <!-- Floating skill badges around avatar -->
+  <!-- AI badge -->
+  <rect x="780" y="310" width="110" height="38" rx="19" fill="rgba(14,165,233,0.15)" stroke="rgba(14,165,233,0.35)" stroke-width="1.5"/>
+  <circle cx="802" cy="329" r="7" fill="#0EA5E9" opacity="0.8"/>
+  <text x="816" y="334" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="white" font-weight="600">AI Websites</text>
+
+  <!-- Full Stack badge -->
+  <rect x="1160" y="330" width="120" height="38" rx="19" fill="rgba(30,58,138,0.5)" stroke="rgba(14,165,233,0.3)" stroke-width="1.5"/>
+  <text x="1220" y="354" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="white" font-weight="500" text-anchor="middle">Full Stack</text>
+
+  <!-- SEO badge -->
+  <rect x="790" y="630" width="90" height="36" rx="18" fill="rgba(14,165,233,0.12)" stroke="rgba(14,165,233,0.3)" stroke-width="1.5"/>
+  <text x="835" y="653" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#0EA5E9" font-weight="600" text-anchor="middle">SEO</text>
+
+  <!-- UI/UX badge -->
+  <rect x="1160" y="610" width="100" height="36" rx="18" fill="rgba(30,58,138,0.4)" stroke="rgba(14,165,233,0.25)" stroke-width="1.5"/>
+  <text x="1210" y="633" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="rgba(255,255,255,0.8)" font-weight="500" text-anchor="middle">UI / UX</text>
+
+  <!-- Scroll indicator -->
+  <rect x="715" y="756" width="22" height="36" rx="11" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+  <circle cx="726" cy="768" r="3" fill="#0EA5E9">
+    <animate attributeName="cy" values="766;776;766" dur="1.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Bottom gradient fade -->
+  <defs>
+    <linearGradient id="bottomFade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A1633;stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:#0A1633;stop-opacity:0.6"/>
+    </linearGradient>
+  </defs>
+  <rect y="680" width="1440" height="130" fill="url(#bottomFade)"/>
+</svg>
